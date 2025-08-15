@@ -3,7 +3,9 @@ import { View, Text, Image, TouchableOpacity, StyleSheet, SafeAreaView } from 'r
 import dog from '../imagens/casual_dog.png';
 import google from '../imagens/Google.png';
 
-export default function TelaPrincipal({ onGooglePress, onOtherPress }) {
+
+
+export default function TelaPrincipal({ onGooglePress, onOtherPress, navigation}) {
   return (
     <SafeAreaView style={styles.container}>
 
