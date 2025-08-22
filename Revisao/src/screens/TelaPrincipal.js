@@ -3,9 +3,7 @@ import { View, Text, Image, TouchableOpacity, StyleSheet, SafeAreaView } from 'r
 import dog from '../imagens/casual_dog.png';
 import google from '../imagens/Google.png';
 
-
-
-export default function TelaPrincipal({ onGooglePress, onOtherPress, navigation}) {
+export default function TelaPrincipal({ onOtherPress, navigation}) {
   return (
     <SafeAreaView style={styles.container}>
 
@@ -15,7 +13,7 @@ export default function TelaPrincipal({ onGooglePress, onOtherPress, navigation}
         <Text style={styles.titulo}>Ótimo dia!</Text>
         <Text style={styles.subtitulo}>Como deseja acessar?</Text>
 
-        <TouchableOpacity style={styles.googleBotao} activeOpacity={0.8} onPress={onGooglePress}>
+        <TouchableOpacity style={styles.googleBotao} onPress={() => navigation.navigate('TelaLogin')} activeOpacity={0.8}>
           <View style={styles.google}>
             <Image source={google} style={styles.googleIcone} resizeMode='contain'/>
             <Text style={styles.googleTexto}>Como deseja acessar?</Text>
